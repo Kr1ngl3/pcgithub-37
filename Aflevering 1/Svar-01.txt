@@ -1,0 +1,23 @@
+1) alle tegn vises perfekt
+
+2) Resultatet af 3.3 == 1.1 + 1.1 + 1.1 burde være rigtigt men nogle bestemte komma tal giver en uendelig lang kæde af binær 
+kode som pc'en cutter af for at det ikke skal fylde for meget, hvilket så resultere i tal der varriere med små decimaler forskel. 
+Resultatet skal være x.3 hvor x er et tal mellem 1-16 nogle af de højere tal virker med bestemte tal lagt sammen
+
+3) en lignende årsag dog hvor svaret "0,3" heller ikke er præcist selvom det var det i processing
+
+4)
+"cd" skifter dit valgt directory
+"cls" sletter alt i terminalen eller clear screen
+"mkdir" laver en ny mappe 
+"dir" liste alle directories i din åbne mappe
+"shutdown" slukker computeren
+"ssh" eller "secure shell" er en netværks protocol som bruges til at forbinde til systemer og styre 
+dem over internettet gennem terminalen
+
+5)I følge graffen vil man efter 2 dage have glemt cirka 75% af hvad man har lært og huske 25% af den viden du har lært
+
+6) 28 mennesker mistede livet
+
+som noten 'Derfor dumper computere til matematik' selv siger vil 1/2-tik, 1/4-tik,
+1/8-tik og 1/16-tik repræsenteres korrekt af computeren

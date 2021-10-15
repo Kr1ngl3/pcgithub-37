@@ -1,0 +1,41 @@
+
+Afleveringsopgave 02   (2-mands-gruppeopgave)
+Der gives karakter efter 7-trins-skalaen.
+Version: 1.61803
+---------------------------------------------
+
+I har alle den 1.september, 2021 modtaget en besked på Lectio, med vedhæftet
+pdf "Lærebog til Processing ...".
+Benyt denne til at læse hvordan I tegner en firkant i Processing.
+
+Husk at I skal indsende mindst een fil (gerne *.txt format) !!!
+Denne bør indeholde URL adressen på det benyttede GitHub repository !
+
+Bilag
+-----
+Vedhæftet finder I denne fil der beskriver opgaverne.
+Vedhæftet finder I et køreklart PDE-program: Binary_to_Decimal.pde
+Vedhæftet finder I en JPEG fil der viser gruppernes medlemmer.
+
+0) I skal skrive et Pde-program, med navnet: firkanter.pde
+   der benytter alle de indbyggede funktioner/metoder der findes i
+   Processing til at tegne den samme identiske firkant/rektangel.
+   Skriv et eksempel kald for hver funktion du finder.
+   Programmet skal kunne kompileres og køres.
+
+1) Øverst i filen skal I - som kommentar - skrive navnene på gruppens medlemmer.
+
+2) Modificer dernæst kildekoden i Binary_to_Decimal.pde, således at cirkler 
+   erstattes med firkanter.
+   Tænd/sluk skal fortsat fungere, også hvis vi klikker tæt på et hjørne,
+   inde i firkanten.
+
+3) Kommenter jeres ændringer i kildekode filen.
+
+4) Det ændrede PDE program skal gemmes i en fil med navnet: svar-02.pde
+   og filen skal uploades til et gruppenmedlems GitHub repository.
+
+5) I skal ligeledes aflevere en pdf-udgave af det modificerede program i 2),
+   der indeholde linienumre (for evt. nemt og kommentere jeres kildekode).
+   
+// end
