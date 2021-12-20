@@ -1,0 +1,120 @@
+
+Afleveringsopgave 03   (2-mands-gruppeopgave)
+Der gives karakter efter 7-trins-skalaen.
+Version: 2,71828
+---------------------------------------------
+
+I har alle den 1.september, 2021 modtaget en besked p� Lectio, med vedh�ftet
+pdf "L�rebog til Processing ...".
+Benyt denne til at l�se hvordan I benytter Processing.
+
+Husk at I skal indsende mindst een fil (gerne *.txt format) !!!
+Denne b�r indeholde URL adressen p� det benyttede GitHub repository !
+
+Bilag
+-----
+Vedh�ftet finder I denne fil der beskriver delopgaverne.
+Vedh�ftet finder I et k�reklart PDE-program: Binary_to_Decimal.pde
+Vedh�ftet finder I en JPEG fil der viser gruppernes medlemmer.
+
+
+Opgave
+------
+Jeres svar p� nedenst�ende sp�rgsm�l A) til D) skal afleveres i en pdf-fil 
+med navnet svar_03_A_D.pdf
+
+A0) En n-bit streng kan (minimum) fortolkes p� hvormange m�der/repr�sentationer ?
+
+A1) En n-bit streng kan fortolkes p� hvormange m�der/repr�sentationer.
+    Obs: her menes de repr�sentationer der tillader negative heltal ?
+
+A2) Hvad hedder hver af de fundne m�der/repr�sentationer i A1 ?
+
+A3) Angiv fordele og ulemper ved HVER af de fundne m�der/repr�sentationer i A1 ?
+
+B1) Hvilke(n) af de fundne m�der/repr�sentationer i A1, har et "Weird Number" ?
+
+B2) Hvad er "Weird Number" v�rdien for en n-bit streng ?
+
+B3) Hvad er "Weird Number" v�rdien for en 8-bit streng ?
+
+C1) For HVER af de ovenfor fundne m�der/repr�sentationer i A1,
+    angiv 7-bit strengen for decimal tallene samt en detaljeret
+    redeg�relse for hvordan I kom frem til bit strengen:
+    
+    -42 = bbb bbbb       (7-bit)
+     42 = bbb bbbb
+    -128 = bbb bbbb 
+     128 = bbb bbbb
+
+    hvor b er bit-v�rdier 0/1.
+    
+C2) For HVER af de ovenfor fundne m�der/repr�sentationer i A1,
+    angiv 8-bit strengen for decimal tallene samt en detaljeret
+    redeg�relse for hvordan I kom frem til bit strengen:
+    
+    -42 = bbbb bbbb       (8-bit)
+     42 = bbbb bbbb
+    -128 = bbbb bbbb
+     128 = bbbb bbbb
+
+    hvor b er bit-v�rdier 0/1.
+    
+D1) For HVER af de ovenfor fundne m�der/repr�sentationer i A1,
+    find 8-bit strengen for addition af f�lgende decimaltal:
+    
+      -15 + 5
+  
+    Udfyld et skema som nedenst�ende for hver m�de/repr�sentation,
+    og skriv hvad der sker i hver af de to (???), hvis der sker noget:
+       
+          mmmmm mmm   [mente]
+      +/-  bbbb bbbb  (s)
+      +/-  dddd dddd  (t)
+      ==============
+           cccc cccc           (???) 
+      +/-          f                            
+      ==============
+           eeee eeee  (u)      (???) 
+
+    hvor (m, b, c, d, e, f) er bit-v�rdier og (s, t, u) er decimaltal.
+
+
+D2) For HVER af de ovenfor fundne m�der/repr�sentationer i A1,
+    find 8-bit strengen for subtraktion af f�lgende decimaltal: 
+    
+      15 - 5
+    
+    Udfyld et skema som nedenst�ende for hver m�de/repr�sentation,
+    og skriv hvad der sker i hver af de to (???), hvis der sker noget:
+       
+          mmmmm mmm   [mente]
+      +/-  bbbb bbbb  (s)
+      +/-  dddd dddd  (t)
+      ==============
+           cccc cccc           (???) 
+      +/-          f                            
+      ==============
+           eeee eeee  (u)      (???) 
+
+    hvor (m, b, c, d, f) er bit-v�rdier og (s, t, u) er decimaltal.
+    
+
+
+E1) I det f�lgende kan I frit v�lge om I vil benytte den originale
+    kildekode i Binary_to_Decimal.pde
+    ELLER om I vil benytte Jeres modificerede svar_02.pde fra Aflevering-02 !!!
+
+E2) �verst i filen skal I - som kommentar - skrive navnene p� gruppens medlemmer.
+
+E3) Kommenter jeres �ndringer i kildekode filen.
+
+E4) Det �ndrede PDE program skal gemmes i en fil med navnet: svar_03.pde
+    og filen skal uploades til et gruppemedlems GitHub repository.
+
+    Programmet skal kunne kompileres og k�res.
+   
+E5) I skal ligeledes aflevere en pdf-udgave af det modificerede program i E4,
+    der indeholder linienumre (for evt. nemt at kommentere jeres kildekode).
+   
+// end
