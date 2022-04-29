@@ -17,7 +17,9 @@
 
 // Biblioteker til brug ved afprøvning:
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
+import java.util.Random;
 
 /**
   * Klassen Brøk er en udvidelse af Java' indbyggede klasse Number.
@@ -199,6 +201,143 @@ public class Brøk extends Number implements Comparable<Brøk> {
         return t1 - t2;
 
     } 
+	
+	//selv implementerede sorterings algoritme med mergesort ArrayList version
+	public static ArrayList<Brøk> sorting(ArrayList<Brøk> list)
+	{
+		//test om listen er 1 lang og derfor gået igennem eller sorteret
+		if (list.size() <= 1)
+		{
+			return list;
+		}
+		
+		//lav arraylist til venstre og højre del af listen
+		ArrayList<Brøk> leftList = new ArrayList<Brøk>();
+		ArrayList<Brøk> rightList = new ArrayList<Brøk>();
+		
+		for (int i = 0; i < list.size(); i++)
+		{
+			//tilføj første halvdel
+			if (i < list.size() / 2)
+			{
+				leftList.add(list.get(i));
+			}
+			//tilføj anden halvdel
+			else
+			{
+				rightList.add(list.get(i));
+			}
+			
+		}
+			//kalder mergeSort rekursivt indtil listerne er delt op
+			leftList = sorting(leftList);
+			rightList = sorting(rightList);
+			
+			//returnere listen sorteret
+			return merge(leftList, rightList);
+	}
+	//liste der samler right og left og sammentidig sammeligner dem ArrayList version
+	public static ArrayList<Brøk> merge(ArrayList<Brøk> left, ArrayList<Brøk> right)
+	{
+		ArrayList<Brøk> result = new ArrayList<Brøk>();
+		
+		while (left.size() != 0 && right.size() != 0)
+		{
+			//ser hvad for en der er størst med compare metode
+			// hvis compare returner et tal under 0 er første brøk i left mindre end første brøk i right og skal derfor tilføjes til result
+			if (left.get(0).compareTo(right.get(0)) < 0)
+			{
+				//tilføjer første brøk i left til result hvis den er større end første brøk i right
+				result.add(left.get(0));
+				//fjerne brøkken fra left efter den er tilføjet til result
+				left.remove(0);
+			}
+			// gør det modsatte for når første brøk i right er større end første i left
+			else
+			{
+				result.add(right.get(0));
+				right.remove(0);
+			}
+		}
+		
+		//nu er der rester i en af listerne og det bliver rykket til result
+		while (left.size() != 0)
+		{
+			result.add(left.get(0));
+			left.remove(0);
+		}
+		
+		while (right.size() != 0)
+		{
+			result.add(right.get(0));
+			right.remove(0);
+		}
+		//returnere result listen
+		return result;
+	}
+	
+	//array version af mergesort
+	public static Brøk[] sorting(Brøk[] array)
+	{
+		//test om listen er 1 lang og derfor gået igennem eller sorteret
+		if (array.length <= 1)
+		{
+			return array;
+		}
+		
+		//lav arraylist til venstre og højre del af listen
+		Brøk[] leftArray = Arrays.copyOfRange(array, 0, array.length / 2);
+		Brøk[] rightArray = Arrays.copyOfRange(array, array.length / 2, array.length);
+		
+		//rekursivt kalder mergeSort indtil listerne er delt op
+		leftArray = sorting(leftArray);
+		rightArray = sorting(rightArray);
+		
+		//returnere listen sorteret
+		return merge(leftArray, rightArray);
+	}
+	
+	//liste der samler right og left og sammentidig sammeligner dem
+	public static Brøk[] merge(Brøk[] left, Brøk[] right)
+	{
+		ArrayList<Brøk> result = new ArrayList<Brøk>();
+		
+		while (left.length != 0 && right.length != 0)
+		{
+			//ser hvad for en der er størst med compare metode
+			// hvis compare returner et tal under 0 er første brøk i left mindre end første brøk i right og skal derfor tilføjes til result
+			if (left[0].compareTo(right[0]) < 0)
+			{
+				//tilføjer første brøk i left til result hvis den er større end første brøk i right
+				result.add(left[0]);
+				//fjerne brøkken fra left efter den er tilføjet til result
+				left = Arrays.copyOfRange(left, 1, left.length);
+			}
+			// gør det modsatte for når første brøk i right er større end første i left
+			else
+			{
+				result.add(right[0]);
+				right = Arrays.copyOfRange(right, 1, right.length);
+			}
+		}
+		
+		//nu er der rester i en af listerne og det bliver rykket til result
+		while (left.length != 0)
+		{
+			result.add(left[0]);
+			left = Arrays.copyOfRange(left, 1, left.length);
+		}
+		
+		while (right.length != 0)
+		{
+			result.add(right[0]);
+			right = Arrays.copyOfRange(right, 1, right.length);
+		}
+		//returnere result listen
+		Brøk resultArray[] = new Brøk[result.size()];
+		return result.toArray(resultArray);
+	}
+	
 
     /** SFD (største fælles divisor)
       * Hjælpefunktion, der skal finde SFD for heltallene t og n
@@ -320,17 +459,98 @@ public class Brøk extends Number implements Comparable<Brøk> {
 
         // test af liste med brøker:
         ArrayList<Brøk> mineBrøker = new ArrayList<Brøk>();
+		Brøk k1 = new Brøk(4, 5);
+		Brøk k2 = new Brøk(58, 62);
+		Brøk k3 = new Brøk(59, 24);
+		Brøk k4 = new Brøk(33, 31);
+		Brøk k5 = new Brøk(30, 68);
+		Brøk k6 = new Brøk(51, 22);
+		Brøk k7 = new Brøk(33, 84);
+		Brøk k8 = new Brøk(90, 79);
+		Brøk k9 = new Brøk(52, 7);
         mineBrøker.add(f2);
         mineBrøker.add(f1);
         mineBrøker.add(f3);
+		mineBrøker.add(k1);
+		mineBrøker.add(k2);
+		mineBrøker.add(k3);
+		mineBrøker.add(k4);
+		mineBrøker.add(k5);
+		mineBrøker.add(k6);
+		mineBrøker.add(k7);
+		mineBrøker.add(k8);
+		mineBrøker.add(k9);
+		
+		
         // sortering af listen ovenfor
+		ArrayList<Brøk> mergeList = sorting(mineBrøker);
         Collections.sort(mineBrøker);
-
+		
+		System.out.println("default sorting");
         for (Brøk f : mineBrøker) {
             System.out.print("  " + f);
         }
+        System.out.println("\nmerge sort med ArrayList");
+		
+		for (Brøk f : mergeList) {
+            System.out.print("  " + f);
+        }
         System.out.println();
+		
+		//test af mergesort med array i stedet for ArrayList
+		Brøk test[] = { f2, f1, f3, k1, k2, k3, k4, k5, k6, k7, k8, k9};
+		
+		test = sorting(test);
+		System.out.println("merge sort med array");
+		
+		for (Brøk f : test)
+		{
+			System.out.print("  " + f);
+		}
         
+		
+		//test med tilfældige brøkker
+		Random rand = new Random();
+		ArrayList<Brøk> randomMerge = new ArrayList<Brøk>();
+		ArrayList<Brøk> collectionSortRandom = new ArrayList<Brøk>();
+		Brøk randomMergeArray[] = new Brøk[11];
+		
+		for (int i = 0; i <= 10; i++)
+		{
+			// + 1 for ellers kunne den blive 0
+			Brøk brøk = new Brøk(rand.nextInt(100) + 1, rand.nextInt(100) + 1);
+			randomMerge.add(brøk);
+			collectionSortRandom.add(brøk);
+			randomMergeArray[i] = brøk;
+		}
+		//sortere dem med de forskellige metoder
+		Collections.sort(collectionSortRandom);
+		randomMerge = sorting(randomMerge);
+		randomMergeArray = sorting(randomMergeArray);
+		
+		System.out.println("\n\n\nTest med tilfældige brøkker\n\nCollections.sort()");
+		for (Brøk brøk : collectionSortRandom)
+		{
+			System.out.print(brøk + " ");
+		}
+		System.out.println("\n");
+		System.out.println("mergeSort med ArrayList");
+		
+		for (Brøk brøk : randomMerge)
+		{
+			System.out.print(brøk + " ");
+		}
+		
+		System.out.println("\n\nmerge sort med array");
+		
+		for (Brøk brøk : randomMergeArray)
+		{
+			System.out.print(brøk + " ");
+		}
+		
+		System.out.println("\n");
+		
+		
         // test af ulovlig brøk (dvs. nævner = 0)
         Brøk fEx = new Brøk(13, 0);    // skal kaste exception
         System.out.println(fEx);
