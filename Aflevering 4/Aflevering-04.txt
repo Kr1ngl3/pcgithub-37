@@ -1,0 +1,27 @@
+
+Afleveringsopgave 04   (3-mands-gruppeopgave)
+Der gives karakter efter 7-trins-skalaen.
+Version: 1.618031
+---------------------------------------------
+
+I skal indsende den opdaterede fil: svar_04.java
+på Lectio !!!
+
+Bilag
+-----
+Vedhæftet finder I denne fil der beskriver opgaven.
+Vedhæftet finder I et delvist køreklart Java-program: Brøk.java
+Vedhæftet finder I en JPEG fil der viser gruppernes medlemmer.
+
+1) Øverst i filen skal I - som kommentar - skrive navnene på gruppens medlemmer.
+
+2) Modificer dernæst kildekoden i Brøk.java de steder hvor der står // TODO
+
+3) Tilføj metoden "sorting", der sorterer en tabel (array) af tilfældige brøker
+   og test den grundigt. I kan frit vælge om den skal returnere in-place eller
+   returnere en ny tabel med de sorterede brøker !!!
+
+4) Det ændrede Java program skal gemmes i en fil med navnet: svar_04.java
+   og filen skal indsendes til Lectio.
+
+// end
